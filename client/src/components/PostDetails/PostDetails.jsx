@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import moment from 'moment';
 import { useParams, useHistory } from 'react-router-dom';
 
+import CommentSection from './CommentSection';
 import { getPost, getPostsBySearch } from '../../actions/posts';
 import useStyles from './styles';
 
@@ -42,7 +43,7 @@ const PostDetails = () => {
     <div>
       {/* <div className={classes.card}> */}
         <div className={classes.gameContainer}>
-            <iframe width="100%" height="100%" src="https://www.addictinggames.com/embed/html5-games/18480" scrolling="no"></iframe>
+            <iframe width="100%" height="100%" src={post.gameLink} scrolling="no"></iframe>
         </div>
         <Paper style={{ padding: '20px', borderRadius: '15px' }} elevation={6}>
         <div className={classes.section}>
@@ -55,7 +56,9 @@ const PostDetails = () => {
           <Divider style={{ margin: '20px 0' }} />
           <Typography variant="body1"><strong>Realtime Chat - coming soon!</strong></Typography>
           <Divider style={{ margin: '20px 0' }} />
-          <Typography variant="body1"><strong>Comments - coming soon!</strong></Typography>
+          <CommentSection post={post} >
+
+          </CommentSection>
           <Divider style={{ margin: '20px 0' }} />
         </div>
         {/* <div className={classes.imageSection}>
