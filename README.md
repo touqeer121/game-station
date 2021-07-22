@@ -1,7 +1,7 @@
 # Memories
 
 <!-- ![Game Station](https://i.ibb.co/Z8Y0CJv/Screenshot-2020-10-30-at-11-10-04.png) -->
-![Game Station]
+Game Station
 ## Introduction
 About:
 * A web app where developers can upload their browser based game which then can be played by everyone.
